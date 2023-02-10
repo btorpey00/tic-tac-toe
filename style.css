@@ -26,7 +26,7 @@ h1 {
     aspect-ratio: 1 / 1;
     box-sizing: border-box;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3, 1fr);
 }
 
 .square {
@@ -69,7 +69,7 @@ i.fa-o {
     border-left: none;
 }
 
-.players-turn {
+.players-turn-text {
     font-size: 2rem;
     margin: 1.25rem 0;
 }
@@ -77,4 +77,20 @@ i.fa-o {
 #restart-button {
     border: none;
     font-size: 3rem;
+    transition: .5s;
+    position: fixed;
+    bottom: 2rem;
+    left: calc(50vw - 1.5rem);
+}
+
+#restart-button:hover {
+    color: yellowgreen;
+    transform:rotate(360deg);
+    transition: 3s;
+    scale: 1.3;
+}
+
+#restart-button:hover:active {
+    transition: .2s;
+    scale: 1;
 }
