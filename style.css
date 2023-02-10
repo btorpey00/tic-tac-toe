@@ -1,0 +1,80 @@
+:root {
+    --bg-color: white;
+    --grid-color: gray;
+    --player1-color: green;
+    --player2-color: blue;
+    --main-text-color: green;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: var(--main-text-color);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    margin-top: 0;
+}
+
+#game-board {
+    display: grid;
+    width: calc(min(95vmin, 600px));
+    aspect-ratio: 1 / 1;
+    box-sizing: border-box;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
+}
+
+.square {
+    border: 2px solid var(--grid-color);
+    font-size: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+i.fa-x {
+    color: var(--player1-color);
+}
+
+i.fa-o {
+    color: var(--player2-color);
+}
+
+#square0,
+#square1,
+#square2 {
+    border-top: none;
+}
+
+#square2,
+#square5,
+#square8 {
+    border-right: none;
+}
+
+#square6,
+#square7,
+#square8 {
+    border-bottom: none;
+}
+
+#square0,
+#square3,
+#square6 {
+    border-left: none;
+}
+
+.players-turn {
+    font-size: 2rem;
+    margin: 1.25rem 0;
+}
+
+#restart-button {
+    border: none;
+    font-size: 3rem;
+}
